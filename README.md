@@ -170,9 +170,7 @@ Key design rules enforced in code:
 
 ### Feature engineering (deterministic, nothing learned from held-out rows)
 
-$$
-\mathrm{balance\_log\_signed} = \operatorname{sign}(b)\,\ln\left(1+\lvert b\rvert\right), \qquad \mathrm{campaign\_log} = \ln\left(1+\max(c,0)\right)
-$$
+`balance_log_signed = sign(b) · ln(1 + |b|)`  and  `campaign_log = ln(1 + max(c, 0))`
 
 Plus flags: `previously_contacted = [pdays ≥ 0]`, `previous_positive = [previous > 0]`, `poutcome_success = [poutcome = success]`. Numeric columns are standardized and categoricals one-hot encoded.
 
