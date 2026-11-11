@@ -5,7 +5,7 @@ from sklearn.metrics import auc, precision_recall_curve
 
 
 def pr_auc(y_true, scores):
-    """Trapezoidal area under the precision-recall curve (larger = more anomalous)."""
+    """Trapezoidal area under the precision-recall curve; larger values indicate stronger ranking of positive examples."""
     y = np.asarray(y_true, dtype=int).reshape(-1)
     s = np.asarray(scores, dtype=float).reshape(-1)
     if len(y) != len(s) or not len(y) or len(np.unique(y)) != 2:
@@ -27,14 +27,14 @@ def multiclass_brier(y_true, probabilities):
 
 
 def precision_recall_at_k(y_true, scores, k):
-    """Return precision@k and recall@k for descending anomaly scores."""
+    """Return precision@k and recall@k after ranking scores from highest to lowest."""
     y = np.asarray(y_true, dtype=int).reshape(-1)
     s = np.asarray(scores, dtype=float).reshape(-1)
     if len(y) != len(s) or not len(y) or k < 1 or k > len(y):
         raise ValueError("equal non-empty arrays and 1 <= k <= n are required")
     positives = int(y.sum())
     if positives == 0:
-        raise ValueError("recall@k is undefined without positive anomalies")
+        raise ValueError("recall@k is undefined without positive examples")
     top = np.argsort(-s, kind="stable")[:k]
     found = int(y[top].sum())
     return {"precision": found / k, "recall": found / positives, "true_positives": found}

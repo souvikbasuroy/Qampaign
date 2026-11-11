@@ -29,7 +29,7 @@ Verified project environment versions:
 - matplotlib 3.11.2
 - qiskit-optimization 0.7.0
 
-All versions are pinned in Qampaign/requirements.txt.
+All versions are pinned in requirements.txt.
 
 ## Quantum circuits and backends
 
@@ -46,4 +46,4 @@ Transpiler statistics and logical-to-physical mappings are in the root stage2_se
 
 ## Submission artifacts
 
-The pipeline writes root-level stage1_predictions.csv, stage2_selection.csv/.json, and stage3_simulation.csv/.json, while preserving package-local copies in Qampaign/results/. The Monte Carlo, circuit compilation/noise, error, and uncertainty-propagation details are additive fields and do not alter the previously reported stage results.
+The pipeline writes root-level stage1_predictions.csv, stage2_selection.csv/.json, and stage3_simulation.csv/.json, while preserving package-local copies in results/. The Monte Carlo, circuit compilation/noise, error, and uncertainty-propagation details are additive fields and do not alter the previously reported stage results.

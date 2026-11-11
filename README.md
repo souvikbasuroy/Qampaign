@@ -62,7 +62,7 @@ Only three test customers have clearly higher probabilities: C0081 0.3983, C0031
 
 Submitted exact selection: C0081, C0031, C0079, C0222, C0087, C0256; objective 16.122; contact cost 13/25; capacity 11/22. All 210 subsets are feasible. Maximum six-customer cost is 18 and capacity is 17, so limits are inactive for this pool.
 
-The QAOA optimum mass is about 38% (best of 80 runs; varies slightly across machines), versus random feasible-subset chance 1/210 = 0.48%. Median mass is 0.68%; 3/80 settings reached at least 10%. Best settings: COBYLA, p=4, restart 4, optimizer seed 40046, simulator seed 42. QAOA matches the exact optimum on this run; both reported gaps are zero. Exact search is the submitted answer. This 210-combination problem does not demonstrate quantum advantage.
+The reported Stage 2 transpiled depth (5,376; 1,733 CX) includes generic state preparation of the weight-six Dicke state and routing of the all-to-all XY mixer on a linear topology, so a dedicated Dicke circuit would be shallower. The QAOA optimum mass is about 38% (best of 80 runs; varies slightly across machines), versus random feasible-subset chance 1/210 = 0.48%. Median mass is 0.68%; 3/80 settings reached at least 10%. Best settings: COBYLA, p=4, restart 4, optimizer seed 40046, simulator seed 42. QAOA matches the exact optimum on this run; both reported gaps are zero. Exact search is the submitted answer. This 210-combination problem does not demonstrate quantum advantage.
 
 ## Stage 3 simulation
 

@@ -154,10 +154,11 @@ def _uncertainty_sensitivity(top, calibration_csv, selected, exact_probability, 
     winners = np.argmax(subset_objectives, axis=1)
     selected_ids = [str(x) for x in selected["customer_id"]]
     chosen_same = np.asarray([set(ids[subsets[i]]) == set(selected_ids) for i in winners])
-    stage3_vals = np.asarray([exact_at_least_k(np.clip(p + offset, 0, 1)[selected.index], 3)
-                              for offset in offsets]) if False else np.asarray([
-        exact_at_least_k(np.clip(p[[np.where(ids == cid)[0][0] for cid in selected_ids]] + offset, 0, 1), 3)
-        for offset in offsets])
+    selected_indices = [np.where(ids == cid)[0][0] for cid in selected_ids]
+    stage3_vals = np.asarray([
+        exact_at_least_k(np.clip(p[selected_indices] + offset, 0, 1), 3)
+        for offset in offsets
+    ])
     return {
         "method": "shared additive calibration-bin uncertainty perturbation; top_10_percent OOF calibration CI is applied as a common offset to all candidate probabilities",
         "warning": "This is a group-level stress-test proxy, not a customer-specific test probability confidence interval; test labels are unavailable.",

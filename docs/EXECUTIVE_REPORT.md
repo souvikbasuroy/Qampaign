@@ -28,4 +28,4 @@ A 10,000-draw shared additive perturbation from the top-decile OOF calibration r
 
 The organizer's original workbook description says Stage1_Test lacks IDs, while the packaged workbook has explicit test IDs validated by the loader. The optional id_mapping setting remains supported; any row-order fallback is marked PROVISIONAL. Test labels are unknown. Only 35 positives support prediction; resource fields are workbook scenarios, not measured business constraints. Treat the chosen six as a shortlist for controlled validation, not a guaranteed campaign result.
 
-Pinned versions, seeds, commands, and full result files are documented in README.md and Qampaign/results/RUN_INFO.md.
+Pinned versions, seeds, commands, and full result files are documented in README.md and results/RUN_INFO.md.

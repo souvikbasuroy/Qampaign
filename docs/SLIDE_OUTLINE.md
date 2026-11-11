@@ -16,7 +16,7 @@
 - Exactly six selected; workbook budget 25 and capacity 22.
 - Exact enumeration of 210 subsets: C0081, C0031, C0079, C0222, C0087, C0256; objective 16.122, cost 13, capacity 11.
 - 10-qubit Dicke state and XY mixer QAOA; best-of-80 optimum mass 37.9%, median 0.68%, random chance 1/210. Exact remains submitted.
-- QAOA transpiled linear-topology diagnostic depth 5,376 / 1,733 CX: routing is costly for this small case.
+- The reported Stage 2 transpiled depth (5,376; 1,733 CX) includes generic state preparation of the weight-six Dicke state and routing of the all-to-all XY mixer on a linear topology, so a dedicated Dicke circuit would be shallower.
 
 ## Slide 4 — Stage 3: circuit and benchmark
 - Six RY(2 arcsin sqrt(p)) gates; state qubit-to-customer order and little-endian strings.
