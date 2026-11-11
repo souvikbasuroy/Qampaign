@@ -2,6 +2,9 @@
 
 A three-stage quantum-classical workflow for a bank deposit campaign. Built for the **Atomiq / Qiskit Fall Fest 2026** hackathon (QuantumSentinel track, IEM Kolkata + IBM Quantum).
 
+📽️ **Presentation:** [View the slides on Canva](https://canva.link/bffmfq6pr4ocub8)
+
+
 1. **Stage 1 — predict:** which of 100 unlabeled customers will respond? (classical logistic regression vs a ZZ quantum-kernel SVC, nested repeated CV)
 2. **Stage 2 — select:** pick exactly 6 of the top 10 under a contact-cost budget and a capacity limit (exact search is the submitted answer; Dicke/XY QAOA is a comparison)
 3. **Stage 3 — simulate:** a 6-qubit circuit estimates the probability that at least 3 of the 6 selected customers respond
