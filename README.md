@@ -116,7 +116,6 @@ python main.py
 | `data/bank_campaign_participant_release.xlsx` | Organizer workbook (sheets: README, Stage1_Train, Stage1_Test, Stage2_Data, Stage2_Constraints). |
 | `data/WORKBOOK_SHA256.txt` | Hash of the workbook for provenance. |
 | `docs/EXECUTIVE_REPORT.md` | One-page results and limits summary. |
-| `docs/REQUIREMENT_AUDIT.md` | Requirement-by-requirement audit with evidence. |
 | `docs/images/notebook_*.png` | Six figures exported from the notebook outputs (bar comparison, calibration, QAOA p=1 circuit, QAOA convergence, Stage 3 circuit, Stage 3 counts vs exact). Shown in README section 12. |
 | `results/RUN_INFO.md` | Seeds, versions, backends, shots, qubit counts. |
 | `results/run_summary.json` | Machine-readable run summary. |
