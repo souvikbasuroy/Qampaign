@@ -340,10 +340,10 @@
     "seed": 42,
     "draws": 10000,
     "calibration_bin": "top_10_percent",
-    "calibration_mean_prediction": 0.24810599698096736,
+    "calibration_mean_prediction": 0.2481059969809673,
     "calibration_observed_rate_ci95": [
-      0.11792388144489496,
-      0.40928326158122164
+      0.1179238814448949,
+      0.4092832615812216
     ],
     "sampled_common_probability_offset_range": [
       -0.1301821155360724,

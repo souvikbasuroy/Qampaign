@@ -12,6 +12,8 @@
 
 ## Library and runtime versions
 
+Tested Python version: **3.13** (verified with Python 3.13.5).
+
 Verified project environment versions:
 
 - Python 3.13.5
