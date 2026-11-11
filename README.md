@@ -1,6 +1,6 @@
 # Qampaign — QuantumSentinel campaign decision pipeline
 
-A three-stage quantum-classical workflow for a bank deposit campaign. Built for the **Atomiq / Qiskit Fall Fest 2026** hackathon (QuantumSentinel track, IEM Kolkata + IBM Quantum).
+A three-stage quantum-classical workflow for a bank deposit campaign. Built for the **Atomiq / Qiskit Fall Fest 2026** hackathon (Qiskit Fall Fest 2026, IEM Kolkata + IBM Quantum).
 
 📽️ **Presentation:** [View the slides on Canva](https://canva.link/bffmfq6pr4ocub8)
 
