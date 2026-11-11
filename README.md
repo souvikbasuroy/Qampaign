@@ -77,11 +77,11 @@ python main.py
 | `settings.yaml` | Every knob: seed 42, CV folds/repeats, hyperparameter grids, feature sets, QAOA depth/restarts/shots, QUBO penalty, Stage 3 shots, diagnostics sizes. |
 | `requirements.txt` | Pinned dependencies (Qiskit 2.6.2, Aer 0.18.2, scikit-learn 1.9.1, MLflow 3.18.0, …). |
 | `LICENSE` | MIT. |
-| `stage1_predictions.csv` | **Judge-facing.** All 100 test customers: `customer_id, predicted_probability, rank, is_top_10`. |
-| `stage2_selection.csv` | **Judge-facing.** The 10 ranked candidates with economics, net value and a `selected` flag (6 are true). |
-| `stage2_selection.json` | **Judge-facing.** Selected IDs, budget/capacity used and limits, objective, measured QAOA bitstrings and counts, brute-force optimum, optimality gaps, transpilation stats. |
-| `stage3_simulation.csv` | **Judge-facing.** Per-qubit customer, probability, circuit estimate, exact value, Monte Carlo value. |
-| `stage3_simulation.json` | **Judge-facing.** Circuit angles, counts, estimates, errors, Monte Carlo, transpilation, noise comparison, uncertainty propagation. |
+| `stage1_predictions.csv` |  All 100 test customers: `customer_id, predicted_probability, rank, is_top_10`. |
+| `stage2_selection.csv` | The 10 ranked candidates with economics, net value and a `selected` flag (6 are true). |
+| `stage2_selection.json` | Selected IDs, budget/capacity used and limits, objective, measured QAOA bitstrings and counts, brute-force optimum, optimality gaps, transpilation stats. |
+| `stage3_simulation.csv` | Per-qubit customer, probability, circuit estimate, exact value, Monte Carlo value. |
+| `stage3_simulation.json` | Circuit angles, counts, estimates, errors, Monte Carlo, transpilation, noise comparison, uncertainty propagation. |
 
 ### `src/customer_pipeline/` — the backend
 
@@ -117,7 +117,6 @@ python main.py
 | `data/WORKBOOK_SHA256.txt` | Hash of the workbook for provenance. |
 | `docs/EXECUTIVE_REPORT.md` | One-page results and limits summary. |
 | `docs/REQUIREMENT_AUDIT.md` | Requirement-by-requirement audit with evidence. |
-| `docs/DEVPOST_FORM.md`, `docs/VIDEO_SCRIPT.md`, `docs/SLIDE_OUTLINE.md` | Submission drafts. |
 | `docs/images/notebook_*.png` | Six figures exported from the notebook outputs (bar comparison, calibration, QAOA p=1 circuit, QAOA convergence, Stage 3 circuit, Stage 3 counts vs exact). Shown in README section 12. |
 | `results/RUN_INFO.md` | Seeds, versions, backends, shots, qubit counts. |
 | `results/run_summary.json` | Machine-readable run summary. |
