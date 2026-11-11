@@ -118,7 +118,7 @@ python main.py
 | `notebooks/customer_selection_workbook.ipynb` | Walkthrough: preprocessing checks, classical vs quantum baselines, QUBO/Dicke formulation, QAOA circuit and convergence, Stage 3 circuit and counts. Figures are embedded. |
 | `data/bank_campaign_participant_release.xlsx` | Organizer workbook (sheets: README, Stage1_Train, Stage1_Test, Stage2_Data, Stage2_Constraints). |
 | `data/WORKBOOK_SHA256.txt` | Hash of the workbook for provenance. |
-| `docs/EXECUTIVE_REPORT.md` | One-page results and limits summary. |
+| `docs/Qampaign_Report.pdf` | 7-page full in detail report . |
 | `docs/images/notebook_*.png` | Six figures exported from the notebook outputs (bar comparison, calibration, QAOA p=1 circuit, QAOA convergence, Stage 3 circuit, Stage 3 counts vs exact). Shown in README section 12. |
 | `results/RUN_INFO.md` | Seeds, versions, backends, shots, qubit counts. |
 | `results/run_summary.json` | Machine-readable run summary. |
