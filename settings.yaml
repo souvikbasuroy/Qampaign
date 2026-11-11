@@ -1,0 +1,48 @@
+﻿seed: 42
+customer_project:
+  seed: 42
+  experiment_name: QuantumSentinel-Workbook-Campaign
+  tracking_uri: sqlite:///results/mlflow.db
+  workbook_path: data/bank_campaign_participant_release.xlsx
+  # Optional CSV/XLSX with 1-based test_row,customer_id columns.
+  # Workbook IDs take precedence when present; otherwise this mapping is used.
+  # Null enables the clearly labelled PROVISIONAL sorted-missing-ID row-order fallback.
+  id_mapping: null
+  results_dir: results
+  stage1:
+    cv_folds: 5
+    cv_repeats: 5
+    inner_cv_folds: 3
+    calibration_folds: 3
+    calibration_bins: 8
+    logistic_c: [0.03, 0.1, 0.3, 1.0]
+    quantum_c: [0.01, 0.1, 1.0, 10.0, 100.0]
+    quantum_kernel_scales: [0.5, 1.0]
+    quantum_qubit_counts: [4, 6]
+    quantum_reps: [1, 2]
+    feature_sets:
+      all:
+        numeric: [age, balance_log_signed, day, campaign_log, pdays, previous,
+                 previously_contacted, previous_positive, poutcome_success]
+        categorical: [job, marital, education, default, housing, loan, contact, month, poutcome]
+      compact:
+        numeric: [balance_log_signed, previous, previously_contacted, previous_positive,
+                 poutcome_success]
+        categorical: [poutcome, contact, month, housing]
+  stage2:
+    qaoa_p_values: [1, 2, 3, 4]
+    qaoa_restarts: 10
+    qaoa_maxiter: 200
+    qaoa_shots: 8192
+    qubo_penalty: 10000
+  stage3:
+    shots: 20000
+
+  # Supplemental judge-facing CSV/JSON artifacts are written at the repository root.
+  submission_output_dir: .
+  submission_diagnostics:
+    transpiler_optimization_level: 1
+    seed_transpiler: 42
+    monte_carlo_draws: 1000000
+    noise_shots: 20000
+    uncertainty_draws: 10000

@@ -1,0 +1,368 @@
+{
+  "id_mapping_status": "WORKBOOK_IDS",
+  "id_mapping_warning": "ID mapping check: this workbook contains explicit Stage1_Test customer_id values; they are used directly, verified unique, disjoint from train, and present in Stage2_Data.",
+  "success_definition": "at least 3 of 6 measured qubits are 1",
+  "qubit_order": [
+    {
+      "qubit": 0,
+      "customer_id": "C0081",
+      "predicted_probability": 0.3982958310014119
+    },
+    {
+      "qubit": 1,
+      "customer_id": "C0031",
+      "predicted_probability": 0.3718537336262704
+    },
+    {
+      "qubit": 2,
+      "customer_id": "C0079",
+      "predicted_probability": 0.33233182577941073
+    },
+    {
+      "qubit": 3,
+      "customer_id": "C0222",
+      "predicted_probability": 0.16047684536899195
+    },
+    {
+      "qubit": 4,
+      "customer_id": "C0087",
+      "predicted_probability": 0.15612742684170014
+    },
+    {
+      "qubit": 5,
+      "customer_id": "C0256",
+      "predicted_probability": 0.15275691828203655
+    }
+  ],
+  "bit_order_note": "Qiskit count strings are little-endian: qubit 0 is the rightmost character.",
+  "shots": 20000,
+  "seed": 42,
+  "backend": "Qiskit AerSimulator (ideal statevector shot sampling)",
+  "qubit_count": 6,
+  "counts": {
+    "010001": 353,
+    "110111": 21,
+    "000000": 3028,
+    "010110": 178,
+    "110000": 92,
+    "000111": 596,
+    "110110": 27,
+    "000001": 1970,
+    "101010": 62,
+    "111111": 2,
+    "001010": 361,
+    "100001": 347,
+    "010011": 228,
+    "110101": 38,
+    "101011": 34,
+    "000010": 1791,
+    "101111": 20,
+    "110001": 64,
+    "000110": 912,
+    "101110": 31,
+    "110010": 65,
+    "000101": 1024,
+    "111110": 4,
+    "001011": 227,
+    "100010": 332,
+    "111101": 8,
+    "100011": 199,
+    "001100": 281,
+    "110011": 33,
+    "101101": 40,
+    "000100": 1525,
+    "111100": 9,
+    "001101": 159,
+    "100100": 295,
+    "101100": 49,
+    "110100": 53,
+    "000011": 1158,
+    "100000": 574,
+    "111010": 10,
+    "001111": 109,
+    "100110": 142,
+    "111011": 9,
+    "001110": 179,
+    "100101": 178,
+    "001001": 411,
+    "001000": 565,
+    "101001": 68,
+    "011011": 44,
+    "010101": 189,
+    "011100": 59,
+    "010100": 271,
+    "010111": 117,
+    "010000": 552,
+    "011001": 64,
+    "010010": 350,
+    "101000": 82,
+    "011000": 106,
+    "011010": 53,
+    "100111": 122,
+    "111001": 11,
+    "011101": 28,
+    "011110": 50,
+    "011111": 22,
+    "111000": 19
+  },
+  "success_shots": 3620,
+  "estimated_success_probability": 0.181,
+  "estimated_success_ci95": [
+    0.17572543851094705,
+    0.18639708049284773
+  ],
+  "exact_probability_from_same_six_probabilities": 0.18175398753959765,
+  "sensitivity_table": [
+    {
+      "scenario": "each_customer_p_0.10",
+      "per_customer_probability": 0.1,
+      "probability_at_least_3_of_6": 0.015850000000000003
+    },
+    {
+      "scenario": "each_customer_p_0.15",
+      "per_customer_probability": 0.15,
+      "probability_at_least_3_of_6": 0.047338593750000005
+    },
+    {
+      "scenario": "each_customer_p_0.20",
+      "per_customer_probability": 0.2,
+      "probability_at_least_3_of_6": 0.09888000000000005
+    },
+    {
+      "scenario": "each_customer_p_0.25",
+      "per_customer_probability": 0.25,
+      "probability_at_least_3_of_6": 0.16943359375
+    },
+    {
+      "scenario": "submitted_six_probabilities",
+      "per_customer_probability": null,
+      "probability_at_least_3_of_6": 0.18175398753959765
+    }
+  ],
+  "absolute_sampling_error": 0.0007539875395976559,
+  "selected_customer_ids": [
+    "C0081",
+    "C0031",
+    "C0079",
+    "C0222",
+    "C0087",
+    "C0256"
+  ],
+  "circuit_parameters": {
+    "per_qubit_gate": "RY(2*arcsin(sqrt(p)))",
+    "angles_radians": [
+      1.3659585426654886,
+      1.3116116640805475,
+      1.228834098896178,
+      0.8243336113035159,
+      0.8124179260303552,
+      0.8030908241876511
+    ],
+    "classical_register_mapping": "qubit i measured to classical bit i; printed Qiskit bitstrings reverse this order"
+  },
+  "circuit_estimate_absolute_error": 0.0007539875395976559,
+  "circuit_estimate_relative_error": 0.004148396135921855,
+  "monte_carlo_benchmark": {
+    "draws": 1000000,
+    "seed": 42,
+    "independent_bernoulli_draws": true,
+    "success_count": 181689,
+    "estimated_probability": 0.181689,
+    "wilson_95_ci": [
+      0.18093448463947823,
+      0.18244596090832468
+    ],
+    "absolute_error_vs_exact": 6.498753959766068e-05,
+    "relative_error_vs_exact": 0.0003575577101630424
+  },
+  "transpilation_diagnostics": {
+    "backend": "Qiskit AerSimulator with a linear coupling map (simulated topology, not an IBM device)",
+    "optimization_level": 1,
+    "seed_transpiler": 42,
+    "logical_qubits": 6,
+    "physical_qubits": 6,
+    "compiled_circuit_register_width": 29,
+    "logical_to_physical_qubit_mapping": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
+    },
+    "transpiled_depth": 5,
+    "gate_counts_by_type": {
+      "rz": 12,
+      "sx": 12,
+      "measure": 6
+    },
+    "two_qubit_gate_count": 0,
+    "basis_gates": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ]
+  },
+  "noise_model_comparison": {
+    "status": "completed",
+    "noise_model": {
+      "single_qubit_depolarizing_probability": 0.005,
+      "cx_depolarizing_probability": 0.02,
+      "readout_assignment_matrix_true_columns_observed_rows": [
+        [
+          0.98,
+          0.03
+        ],
+        [
+          0.02,
+          0.97
+        ]
+      ]
+    },
+    "transpilation": {
+      "backend": "Qiskit AerSimulator with a linear coupling map (simulated topology, not an IBM device)",
+      "optimization_level": 1,
+      "seed_transpiler": 42,
+      "logical_qubits": 6,
+      "physical_qubits": 6,
+      "compiled_circuit_register_width": 63,
+      "logical_to_physical_qubit_mapping": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "transpiled_depth": 5,
+      "gate_counts_by_type": {
+        "rz": 12,
+        "sx": 12,
+        "measure": 6
+      },
+      "two_qubit_gate_count": 0,
+      "basis_gates": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ]
+    },
+    "shots": 20000,
+    "seed_simulator": 42,
+    "measurement_counts": {
+      "110000": 105,
+      "000111": 601,
+      "110110": 35,
+      "101010": 83,
+      "000001": 1891,
+      "001000": 591,
+      "110111": 25,
+      "000000": 2825,
+      "110010": 79,
+      "101110": 32,
+      "000101": 970,
+      "010100": 302,
+      "110100": 64,
+      "101100": 51,
+      "000011": 1095,
+      "110101": 40,
+      "101011": 58,
+      "000010": 1690,
+      "100000": 549,
+      "010000": 600,
+      "111110": 7,
+      "100010": 331,
+      "001011": 236,
+      "101111": 26,
+      "110001": 86,
+      "000110": 852,
+      "001001": 366,
+      "010011": 231,
+      "010111": 127,
+      "111101": 7,
+      "100011": 237,
+      "001100": 297,
+      "011010": 83,
+      "111100": 14,
+      "100100": 319,
+      "001101": 201,
+      "010010": 349,
+      "011111": 21,
+      "010001": 400,
+      "010101": 210,
+      "101101": 45,
+      "110011": 44,
+      "000100": 1469,
+      "101000": 126,
+      "001111": 116,
+      "111010": 15,
+      "100110": 176,
+      "111111": 4,
+      "100001": 344,
+      "001010": 348,
+      "111011": 8,
+      "100101": 213,
+      "001110": 185,
+      "100111": 115,
+      "011100": 65,
+      "010110": 170,
+      "011000": 142,
+      "011011": 44,
+      "011110": 38,
+      "011101": 35,
+      "111000": 26,
+      "011001": 87,
+      "101001": 80,
+      "111001": 19
+    },
+    "exact_probability": 0.18175398753959765,
+    "unmitigated_probability": 0.20195,
+    "unmitigated_wilson_95_ci": [
+      0.1964436945838817,
+      0.20757077810916222
+    ],
+    "unmitigated_absolute_error": 0.02019601246040234,
+    "unmitigated_relative_error": 0.11111730055442308,
+    "readout_mitigated_probability_linear_inversion": 0.19038430818575597,
+    "mitigated_approximate_95_ci_sampling_only": [
+      0.18414539833982843,
+      0.1966232180316835
+    ],
+    "mitigated_absolute_error": 0.008630320646158318,
+    "mitigated_relative_error": 0.04748352849358027,
+    "mitigation_note": "Tensor-product readout assignment inversion; CI accounts for finite measurement sampling only, not calibration uncertainty."
+  },
+  "stage1_uncertainty_propagation": {
+    "method": "shared additive calibration-bin uncertainty perturbation; top_10_percent OOF calibration CI is applied as a common offset to all candidate probabilities",
+    "warning": "This is a group-level stress-test proxy, not a customer-specific test probability confidence interval; test labels are unavailable.",
+    "seed": 42,
+    "draws": 10000,
+    "calibration_bin": "top_10_percent",
+    "calibration_mean_prediction": 0.24810599698096736,
+    "calibration_observed_rate_ci95": [
+      0.11792388144489496,
+      0.40928326158122164
+    ],
+    "sampled_common_probability_offset_range": [
+      -0.1301821155360724,
+      0.16117726460025428
+    ],
+    "stage2_selection_matches_submitted_exact_selection_rate": 1.0,
+    "most_frequent_selected_set": [
+      "C0081",
+      "C0031",
+      "C0079",
+      "C0222",
+      "C0087",
+      "C0256"
+    ],
+    "stage3_exact_probability_from_perturbed_probabilities_quantiles_2_5_50_97_5": [
+      0.029076864603873865,
+      0.20791468186692091,
+      0.48988278847426664
+    ],
+    "original_stage3_exact_probability": 0.18175398753959765
+  }
+}

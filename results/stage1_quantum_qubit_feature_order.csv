@@ -1,0 +1,5 @@
+qubit,component,top_source_features,angle_range
+0,SVD_PC1,"numeric__previous_positive, numeric__previously_contacted, numeric__previous, numeric__poutcome_success","[0, pi]"
+1,SVD_PC2,"categorical__poutcome_unknown, categorical__contact_cellular, categorical__housing_yes, categorical__housing_no","[0, pi]"
+2,SVD_PC3,"numeric__balance_log_signed, categorical__month_may, categorical__month_nov, numeric__previous_positive","[0, pi]"
+3,SVD_PC4,"numeric__poutcome_success, numeric__previous, categorical__poutcome_success, numeric__previously_contacted","[0, pi]"

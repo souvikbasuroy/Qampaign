@@ -1,0 +1,6 @@
+scenario,per_customer_probability,probability_at_least_3_of_6
+each_customer_p_0.10,0.1,0.015850000000000003
+each_customer_p_0.15,0.15,0.047338593750000005
+each_customer_p_0.20,0.2,0.09888000000000005
+each_customer_p_0.25,0.25,0.16943359375
+submitted_six_probabilities,,0.18175398753959765

@@ -1,0 +1,186 @@
+{
+  "run_id": "011d1d12ac0b4b73942af070b9e896cd",
+  "seed": 42,
+  "workbook": "data/bank_campaign_participant_release.xlsx",
+  "id_mapping_status": "WORKBOOK_IDS",
+  "id_mapping_warning": "ID mapping check: this workbook contains explicit Stage1_Test customer_id values; they are used directly, verified unique, disjoint from train, and present in Stage2_Data.",
+  "stage1": {
+    "chosen_family_by_nested_cv_log_loss": "nested_logistic",
+    "base_rate": 0.11666666666666667,
+    "top10_ids": [
+      {
+        "customer_id": "C0081",
+        "predicted_probability": 0.3982958310014119
+      },
+      {
+        "customer_id": "C0031",
+        "predicted_probability": 0.3718537336262704
+      },
+      {
+        "customer_id": "C0079",
+        "predicted_probability": 0.33233182577941073
+      },
+      {
+        "customer_id": "C0183",
+        "predicted_probability": 0.16771472533384912
+      },
+      {
+        "customer_id": "C0222",
+        "predicted_probability": 0.16047684536899195
+      },
+      {
+        "customer_id": "C0318",
+        "predicted_probability": 0.15911367986776528
+      },
+      {
+        "customer_id": "C0345",
+        "predicted_probability": 0.15799920766807538
+      },
+      {
+        "customer_id": "C0087",
+        "predicted_probability": 0.15612742684170014
+      },
+      {
+        "customer_id": "C0338",
+        "predicted_probability": 0.153341091573552
+      },
+      {
+        "customer_id": "C0256",
+        "predicted_probability": 0.15275691828203655
+      }
+    ],
+    "cv_file": "stage1_cv_metrics.json",
+    "prediction_file": "stage1_predictions.csv"
+  },
+  "stage2": {
+    "selected_ids": [
+      "C0081",
+      "C0031",
+      "C0079",
+      "C0222",
+      "C0087",
+      "C0256"
+    ],
+    "objective_value": 16.122051120975613,
+    "contact_cost": "13/25",
+    "capacity": "11/22",
+    "qaoa_best_feasible": {
+      "bitstring": "1110100101",
+      "objective": 16.122051120975613,
+      "contact_cost": 13,
+      "capacity_units": 11,
+      "rank_indices": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        9
+      ],
+      "customer_ids": [
+        "C0081",
+        "C0031",
+        "C0079",
+        "C0222",
+        "C0087",
+        "C0256"
+      ]
+    },
+    "qaoa_best_of_80": {
+      "runs": 80,
+      "median_optimum_probability_mass": 0.0068359375,
+      "mean_optimum_probability_mass": 0.02558441162109375,
+      "threshold_definition": "at least 10% optimum probability mass per 8192-shot run",
+      "threshold_value": 0.1,
+      "runs_at_or_above_threshold": 3,
+      "best_run_settings": {
+        "p": 4,
+        "optimizer": "COBYLA",
+        "restart": 4,
+        "seed": 40046,
+        "best_expected_normalized_objective": 3.0651246541274615,
+        "sampled_optimum_probability_mass": 0.3790283203125,
+        "sampled_feasibility_rate": 1.0
+      },
+      "random_feasible_subset_chance": 0.004761904761904762
+    },
+    "top_ten_pool_sensitivity": {
+      "purpose": "robustness-only rank-10/rank-11 swap; never used for model/selection choice",
+      "baseline_pool_ids": [
+        "C0081",
+        "C0031",
+        "C0079",
+        "C0183",
+        "C0222",
+        "C0318",
+        "C0345",
+        "C0087",
+        "C0338",
+        "C0256"
+      ],
+      "alternative_pool_ids": [
+        "C0081",
+        "C0031",
+        "C0079",
+        "C0183",
+        "C0222",
+        "C0318",
+        "C0345",
+        "C0087",
+        "C0338",
+        "C0397"
+      ],
+      "swapped_out_id": "C0256",
+      "swapped_in_id": "C0397",
+      "alternative_exact_selected_ids": [
+        "C0081",
+        "C0031",
+        "C0079",
+        "C0222",
+        "C0087",
+        "C0397"
+      ],
+      "alternative_objective_value": 17.30576646737009,
+      "baseline_objective_value": 16.122051120975613,
+      "objective_change": 1.1837153463944787,
+      "selected_id_overlap_count": 5,
+      "cost": 13,
+      "capacity": 10
+    }
+  },
+  "stage3": {
+    "estimated_probability": 0.181,
+    "ci95": [
+      0.17572543851094705,
+      0.18639708049284773
+    ],
+    "exact_probability": 0.18175398753959765,
+    "sensitivity": [
+      {
+        "scenario": "each_customer_p_0.10",
+        "per_customer_probability": 0.1,
+        "probability_at_least_3_of_6": 0.015850000000000003
+      },
+      {
+        "scenario": "each_customer_p_0.15",
+        "per_customer_probability": 0.15,
+        "probability_at_least_3_of_6": 0.047338593750000005
+      },
+      {
+        "scenario": "each_customer_p_0.20",
+        "per_customer_probability": 0.2,
+        "probability_at_least_3_of_6": 0.09888000000000005
+      },
+      {
+        "scenario": "each_customer_p_0.25",
+        "per_customer_probability": 0.25,
+        "probability_at_least_3_of_6": 0.16943359375
+      },
+      {
+        "scenario": "submitted_six_probabilities",
+        "per_customer_probability": null,
+        "probability_at_least_3_of_6": 0.18175398753959765
+      }
+    ]
+  }
+}
