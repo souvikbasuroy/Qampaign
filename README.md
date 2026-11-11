@@ -1,4 +1,4 @@
-# Qampaign — QuantumSentinel campaign decision pipeline
+# Qampaign: Qiskit Fall Fest 2026 pipeline
 
 A three-stage quantum-classical workflow for a bank deposit campaign. Built for the **Atomiq / Qiskit Fall Fest 2026** hackathon (Qiskit Fall Fest 2026, IEM Kolkata + IBM Quantum).
 
